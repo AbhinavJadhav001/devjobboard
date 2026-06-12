@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: dev-job-board-api
+    runtime: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: gunicorn backend.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
