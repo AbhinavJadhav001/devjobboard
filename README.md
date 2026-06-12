@@ -199,7 +199,7 @@ Recommended free deployment:
 - Frontend: Vercel
 - Database: Neon PostgreSQL
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the full deployment guide.
+Use Render for the Django API, Vercel for the React frontend, and Neon PostgreSQL for the production database.
 
 ## Useful Commands
 
