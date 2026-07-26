@@ -43,7 +43,7 @@ SECRET_KEY = os.getenv(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_bool("DEBUG", True)
 
-ALLOWED_HOSTS =ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [
     "devjobboard-production.up.railway.app",
     "localhost",
     "127.0.0.1",
