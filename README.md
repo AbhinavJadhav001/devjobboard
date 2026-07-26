@@ -201,6 +201,19 @@ Recommended free deployment:
 
 Use Render for the Django API, Vercel for the React frontend, and Neon PostgreSQL for the production database.
 
+### Vercel frontend deployment
+
+This repository includes a root `vercel.json`, so it can be imported directly
+into Vercel without changing the project root. Set `VITE_API_BASE_URL` to the
+public URL of the deployed Django API followed by `/api`, then deploy.
+
+Vercel deploys the React frontend only; the Django API needs a persistent host
+and database (the included Render and Neon setup is one option). On that
+backend's first deployment, set `SEED_DEMO_DATA=true`. The build seeds six
+safe demo listings adapted from legitimate records in `job_train.csv`. Change
+the value back to `false` after the initial deployment; the command is
+idempotent, so repeated runs do not duplicate jobs.
+
 ## Useful Commands
 
 Run backend checks:
