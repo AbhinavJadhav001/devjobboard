@@ -45,6 +45,12 @@ DEBUG = env_bool("DEBUG", False)
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://devjobboard1.vercel.app",
+]
+
 
 # Application definition
 
